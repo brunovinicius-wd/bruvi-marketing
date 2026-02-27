@@ -73,7 +73,7 @@ export default function LandingPage() {
       <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="Bruno Vinícius Ads" className="h-10 md:h-14 w-auto object-contain" />
+            <img src={logo} alt="Bruno Vinícius Ads" className="h-14 md:h-20 w-auto object-contain" />
           </div>
           <Button 
             className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 transition-all hover:scale-105"
@@ -538,34 +538,68 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      
-        <footer className="bg-[#0A1225] border-t border-white/10 py-12 md:py-16 text-white/60 text-sm">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="grid md:grid-cols-3 gap-10 items-center">
-              <div className="flex flex-col items-center md:items-start gap-4">
-                <img src={logo} alt="Bruno Vinícius Ads" className="h-10 brightness-0 invert opacity-70" />
-                <p className="text-center md:text-left max-w-xs">
-                  Transformando negócios locais em máquinas previsíveis de vendas através do marketing de performance.
-                </p>
-              </div>
-              
-              <div className="flex flex-col items-center gap-3">
-                <h4 className="text-white/90 font-bold mb-2 uppercase tracking-wider">Contato Direto</h4>
-                <a href={whatsappUrl} className="hover:text-primary transition-colors flex items-center gap-2">
-                  <MessageSquare className="w-4 h-4" /> (11) 91254-8292
+      <footer className="py-12 bg-[#050A18] text-white border-t border-white/5">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid md:grid-cols-3 gap-12 items-start">
+            <div className="flex flex-col items-center md:items-start">
+              <img src={logo} alt="Bruno Vinícius Ads" className="h-16 mb-6 brightness-0 invert object-contain" />
+              <p className="text-gray-400 text-sm text-center md:text-left leading-relaxed max-w-xs">
+                Especialista em tráfego pago e posicionamento digital. Transformando cliques em faturamento real para negócios locais.
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center md:items-start">
+              <h4 className="font-bold mb-6 uppercase tracking-widest text-primary text-sm">Contato Profissional</h4>
+              <div className="space-y-4">
+                <a href="mailto:contato@bruvimarketing.site" className="text-gray-300 hover:text-primary transition-all flex items-center gap-3 group">
+                  <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <CheckCircle2 className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-sm">contato@bruvimarketing.site</span>
                 </a>
-                <a href="mailto:contato@bruvimarketing.com.br" className="hover:text-primary transition-colors flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4" /> contato@bruvimarketing.com.br
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-all flex items-center gap-3 group">
+                  <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <MessageSquare className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-sm">(11) 91254-8292</span>
                 </a>
               </div>
-              
-              <div className="flex flex-col items-center md:items-end gap-4">
-                <p>&copy; {new Date().getFullYear()} Bruno Vinícius Ads. CNPJ: 47.851.981/0001-44. | Desenvolvido com Tecnologia de Ponta.</p>
+            </div>
+
+            <div className="flex flex-col items-center md:items-start">
+              <h4 className="font-bold mb-6 uppercase tracking-widest text-primary text-sm">Portfólio & Social</h4>
+              <div className="space-y-4 w-full">
+                <a 
+                  href="https://www.behance.net/brunovinicius-bruvi" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/5 hover:bg-white/10 border border-white/10 p-3 rounded-xl transition-all flex items-center gap-3 group"
+                >
+                  <Globe className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-medium">Behance Portfólio</span>
+                  <ArrowRight className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/brunovinicius-bruvi" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/5 hover:bg-white/10 border border-white/10 p-3 rounded-xl transition-all flex items-center gap-3 group"
+                >
+                  <Users className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-medium">LinkedIn Profissional</span>
+                  <ArrowRight className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
               </div>
             </div>
           </div>
-        </footer>
-      </div>
-    </>
-    );
-  }
+          
+          <div className="border-t border-white/5 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-[10px] md:text-xs uppercase tracking-widest">
+            <p>© {new Date().getFullYear()} Bruno Vinícius Ads. CNPJ: 47.851.981/0001-44.</p>
+            <p className="text-primary/50 font-bold">Portfólio Profissional de Marketing Digital</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </>
+  );
+}
